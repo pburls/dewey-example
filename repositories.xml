@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<repositories>
-	<manifestFile name="test-repo" location="test-repo" />
-</repositories>
+<deweyManifest>
+	<repositories>
+		<manifestFile name="test-repo" location="test-repo" />
+	</repositories>
+</deweyManifest>

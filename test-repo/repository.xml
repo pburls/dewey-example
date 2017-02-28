@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<repository name="test-repo">
-	<manifestFile name="ExampleWebApiComp" location="ExampleWebApiComp/" />
-	<manifestFile name="ExampleWebApiComp2" location="ExampleWebApiComp2/" />
-	<manifestFile name="ExampleWebApiComp6" location="ExampleWebApiComp6/" />
-	<manifestFile name="ExampleWebApiComp7" location="ExampleWebApiComp7\src\WebApplication2" />
-	<manifestFile name="ExampleAgent" location="ExampleAgent\src" />
-	<manifestFile name="ExampleAgent" location="ExampleAgent\src" />
-</repository>
+<deweyManifest>
+	<repository name="test-repo">
+		<manifestFile name="ExampleWebApiComp" location="ExampleWebApiComp/" />
+		<manifestFile name="ExampleWebApiComp2" location="ExampleWebApiComp2/" />
+		<manifestFile name="ExampleWebApiComp6" location="ExampleWebApiComp6/" />
+		<manifestFile name="ExampleWebApiComp7" location="ExampleWebApiComp7\src\WebApplication2" />
+		<manifestFile name="ExampleAgent" location="ExampleAgent\src" />
+		<manifestFile name="ExampleAgent" location="ExampleAgent\src" />
+	</repository>
+</deweyManifest>
