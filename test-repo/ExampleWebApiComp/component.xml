@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<componentManifest name="ExampleWebApiComp" type="web" sub-type="ui" context="context1">
+	<builds>
+		<build type="msbuild" target="src/ExampleWebApiApplication/ExampleWebApiApplication.csproj" msbuildVersion="14.0" />
+	</builds>
+	<deployments>
+		<deployment type="iis" port="53971" siteName="ExampleWebApiApplication" appPool="ExampleWebApiApplication" content="src/ExampleWebApiApplication" />
+	</deployments>
+	<dependencies>
+		<dependency type="component" name="ExampleWebApiComp2" protocol="http JSON" />
+		<dependency type="component" name="ExampleWebApiComp6" protocol="tcp SOAP"/>
+		<dependency type="component" name="ExampleWebApiComp7" />
+	</dependencies>
+</componentManifest>

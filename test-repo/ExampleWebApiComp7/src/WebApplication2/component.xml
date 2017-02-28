@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<componentManifest name="ExampleWebApiComp7" type="web" context="context1">
+	<builds>
+		<build type="msbuild" target="WebApplication2.csproj" msbuildVersion="14.0" />
+	</builds>
+	<deployments>
+		<deployment type="iis" port="13321" siteName="WebApplication7" appPool="WebApplication7" content="" />
+	</deployments>
+	<dependencies>
+		<dependency type="component" name="ExampleWebApiComp2" />
+		<dependency type="runtimeResource" name="Config.xml" />
+		<dependency type="runtimeResource" name="incoming" />
+		<dependency type="runtimeResource" name="databaseA" />
+		<dependency type="runtimeResource" name="databaseA-connection" />
+		<dependency type="runtimeResource" name="queue-host" />
+	</dependencies>
+</componentManifest>

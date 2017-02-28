@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<componentManifest name="ExampleAgent" type="executable" sub-type="worker">
+	<builds>
+		<build type="msbuild" target="ExampleAgent.sln" msbuildVersion="14.0" />
+	</builds>
+	<dependencies>
+		<dependency type="component" name="ExampleWebApiComp2" />
+		<dependency type="runtimeResource" name="incoming" />
+		<dependency type="runtimeResource" name="status" />
+		<dependency type="runtimeResource" name="rocketship" />
+	</dependencies>
+</componentManifest>

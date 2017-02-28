@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repository name="test-repo">
+	<components>
+		<component name="ExampleWebApiComp" location="ExampleWebApiComp/" />
+		<component name="ExampleWebApiComp2" location="ExampleWebApiComp2/" />
+		<component name="ExampleWebApiComp6" location="ExampleWebApiComp6/" />
+		<component name="ExampleWebApiComp7" location="ExampleWebApiComp7\src\WebApplication2" />
+		<component name="ExampleAgent" location="ExampleAgent\src" />
+	</components>
+	<runtimeResources>
+		<manifestFile name="ExampleAgent" location="ExampleAgent\src" />
+	</runtimeResources>
+</repository>
