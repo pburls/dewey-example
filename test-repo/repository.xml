@@ -6,6 +6,5 @@
 		<manifestFile name="ExampleWebApiComp6" location="ExampleWebApiComp6/" />
 		<manifestFile name="ExampleWebApiComp7" location="ExampleWebApiComp7\src\WebApplication2" />
 		<manifestFile name="ExampleAgent" location="ExampleAgent\src" />
-		<manifestFile name="ExampleAgent" location="ExampleAgent\src" />
 	</manifestFiles>
 </deweyManifest>

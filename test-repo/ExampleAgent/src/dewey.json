@@ -1,0 +1,24 @@
+{
+  "components": [{
+    "name": "ExampleAgent",
+    "type": "executable",
+    "sub-type": "worker",
+    "context": "context1",
+    "builds": [{
+      "type": "msbuild",
+      "target": "ExampleAgent.sln",
+      "msbuildVersion": "14.0"
+      }],
+    "dependencies": [{
+        "type": "component",
+        "name": "ExampleWebApiComp2"
+      }]
+    }],
+  "runtimeResources": [{
+      "type": "queue",
+      "name": "incoming",
+      "provider": "ActiveMQ",
+      "format": "XML",
+      "context": "context1"
+    }]
+}

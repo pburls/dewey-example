@@ -1,0 +1,18 @@
+{
+  "manifestFiles": [{
+    "name": "ExampleWebApiComp",
+    "location": "ExampleWebApiComp/"
+    }, {
+    "name": "ExampleWebApiComp2",
+    "location": "ExampleWebApiComp2/"
+    }, {
+    "name": "ExampleWebApiComp6",
+    "location": "ExampleWebApiComp6/"
+    }, {
+    "name": "ExampleWebApiComp7",
+    "location": "ExampleWebApiComp7/"
+    }, {
+    "name": "ExampleAgent",
+    "location": "ExampleAgent/src"
+    }],
+}
