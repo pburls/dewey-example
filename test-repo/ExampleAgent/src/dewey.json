@@ -2,23 +2,54 @@
   "components": [{
     "name": "ExampleAgent",
     "type": "executable",
-    "sub-type": "worker",
+    "subtype": "worker",
     "context": "context1",
     "builds": [{
       "type": "msbuild",
       "target": "ExampleAgent.sln",
       "msbuildVersion": "14.0"
       }],
-    "dependencies": [{
-        "type": "component",
-        "name": "ExampleWebApiComp2"
-      }]
-    }],
+    "dependencies": [
+      { "type": "component", "name": "ExampleWebApiComp2" },
+      { "type": "runtimeResource", "name": "incoming" },
+      { "type": "runtimeResource", "name": "status" },
+      { "type": "runtimeResource", "name": "rocketship" }
+    ]
+  }],
   "runtimeResources": [{
-      "type": "queue",
-      "name": "incoming",
-      "provider": "ActiveMQ",
-      "format": "XML",
-      "context": "context1"
-    }]
+    "type": "queue",
+    "name": "incoming",
+    "provider": "ActiveMQ",
+    "format": "XML",
+    "context": "context1"
+  }, {
+    "type": "queue",
+    "name": "status",
+    "provider": "ActiveMQ",
+    "format": "XML",
+    "context": "context1"
+  }, {
+    "type": "environment-variable",
+    "name": "queue-host",
+    "context": "context1"
+  }, {
+    "type": "file",
+    "name": "Config.xml",
+    "context": "context1"
+  }, {
+    "type": "database",
+    "name": "databaseA",
+    "provider": "Oracle",
+    "context": "context1"
+  }, {
+    "type": "environment-variable",
+    "name": "databaseA-connection",
+    "context": "context1"
+  }, {
+    "type": "queue",
+    "name": "rocketship",
+    "provider": "ActiveMQ",
+    "format": "XML",
+    "context": "space-travel"
+  }]
 }

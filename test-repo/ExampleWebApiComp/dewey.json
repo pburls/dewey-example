@@ -1,0 +1,32 @@
+{
+  "components": [{
+    "name": "ExampleWebApiComp",
+    "type": "web",
+    "subtype": "ui",
+    "context": "context1",
+    "build": {
+      "type": "msbuild",
+      "target": "src/ExampleWebApiApplication/ExampleWebApiApplication.csproj",
+      "msbuildVersion": "14.0"
+    },
+    "deploy": {
+      "type": "iis",
+      "port": "53971",
+      "siteName": "ExampleWebApiApplication",
+      "appPool": "ExampleWebApiApplication",
+      "content": "src/ExampleWebApiApplication/"
+    },
+    "dependencies": [{
+        "type": "component",
+        "name": "ExampleWebApiComp2",
+        "protocol": "http JSON"
+      }, {
+        "type": "component",
+        "name": "ExampleWebApiComp6",
+        "protocol": "tcp SOAP"
+      }, {
+        "type": "component",
+        "name": "ExampleWebApiComp7"
+    }]
+  }]
+}

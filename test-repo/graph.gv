@@ -1,0 +1,41 @@
+digraph G {
+	subgraph cluster_context1 {
+		label="context1"
+		1 [label="ExampleWebApiComp",image="D:\Development\Dewey\Dewey.CLI\bin\Debug\icons\component-web-ui.png",labelloc="b",shape=box];
+		2 [label="ExampleWebApiComp2",image="D:\Development\Dewey\Dewey.CLI\bin\Debug\icons\component-web-api.png",labelloc="b",shape=box];
+		3 [label="ExampleWebApiComp6",image="D:\Development\Dewey\Dewey.CLI\bin\Debug\icons\component-web-service.png",labelloc="b",shape=box];
+		4 [label="ExampleWebApiComp7",image="D:\Development\Dewey\Dewey.CLI\bin\Debug\icons\component-web.png",labelloc="b",shape=box];
+		5 [label="ExampleAgent",image="D:\Development\Dewey\Dewey.CLI\bin\Debug\icons\component-executable-worker.png",labelloc="b",shape=box];
+		6 [label="incoming\nActiveMQ",image="D:\Development\Dewey\Dewey.CLI\bin\Debug\icons\queue.png",labelloc="b",shape=box];
+		7 [label="status\nActiveMQ",image="D:\Development\Dewey\Dewey.CLI\bin\Debug\icons\queue.png",labelloc="b",shape=box];
+		8 [label="queue-host",image="D:\Development\Dewey\Dewey.CLI\bin\Debug\icons\environment-variable.png",labelloc="b",shape=box];
+		9 [label="Config\.xml",image="D:\Development\Dewey\Dewey.CLI\bin\Debug\icons\file.png",labelloc="b",shape=box];
+		10 [label="databaseA\nOracle",image="D:\Development\Dewey\Dewey.CLI\bin\Debug\icons\database.png",labelloc="b",shape=box];
+		11 [label="databaseA-connection",image="D:\Development\Dewey\Dewey.CLI\bin\Debug\icons\environment-variable.png",labelloc="b",shape=box];
+	}
+	subgraph cluster_space_travel {
+		label="space-travel"
+		12 [label="rocketship\nActiveMQ",image="D:\Development\Dewey\Dewey.CLI\bin\Debug\icons\queue.png",labelloc="b",shape=box];
+	}
+	
+	1 -> 2 [label="http\ JSON"];
+	1 -> 3 [label="tcp\ SOAP"];
+	1 -> 4;
+	2 -> 9;
+	2 -> 6 [label="XML"];
+	2 -> 8;
+	3 -> 2;
+	3 -> 6 [label="XML"];
+	3 -> 7 [label="XML"];
+	3 -> 8;
+	4 -> 2;
+	4 -> 9;
+	4 -> 6 [label="XML"];
+	4 -> 10;
+	4 -> 11;
+	4 -> 8;
+	5 -> 2;
+	5 -> 6 [label="XML"];
+	5 -> 7 [label="XML"];
+	5 -> 12 [label="XML"];
+}

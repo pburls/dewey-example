@@ -1,0 +1,37 @@
+{
+  "components": [{
+    "name": "ExampleWebApiComp7",
+    "type": "web",
+    "context": "context1",
+    "build": {
+      "type": "msbuild",
+      "target": "WebApplication2.csproj",
+      "msbuildVersion": "14.0"
+    },
+    "deploy": {
+      "type": "iis",
+      "port": "13321",
+      "siteName": "WebApplication7",
+      "appPool": "WebApplication7",
+    },
+    "dependencies": [{
+        "type": "component",
+        "name": "ExampleWebApiComp2"
+      }, {
+        "type": "runtimeResource",
+        "name": "Config.xml"
+      }, {
+        "type": "runtimeResource",
+        "name": "incoming"
+      }, {
+        "type": "runtimeResource",
+        "name": "databaseA"
+      }, {
+        "type": "runtimeResource",
+        "name": "databaseA-connection"
+      }, {
+        "type": "runtimeResource",
+        "name": "queue-host"
+    }]
+  }]
+}
